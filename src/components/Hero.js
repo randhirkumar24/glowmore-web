@@ -35,10 +35,6 @@ const Hero = () => {
               <button className="btn-hero-primary">
                 Get Started <FaArrowRight />
               </button>
-              <button className="btn-hero-secondary">
-                <FaPlay className="play-icon" />
-                Watch Demo
-              </button>
             </div>
           </div>
 
