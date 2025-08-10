@@ -33,7 +33,11 @@ const Header = () => {
           
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             {navItems.map((item, index) => (
-              <a key={index} href={item.href} className="nav-link">
+              <a 
+                key={index} 
+                href={item.href} 
+                className={`nav-link ${item.label.includes('Join As') ? 'join-button' : ''}`}
+              >
                 {item.label}
               </a>
             ))}

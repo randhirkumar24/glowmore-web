@@ -23,6 +23,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .logo h2 {
@@ -39,23 +43,28 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
 }
 
 .nav-link {
   text-decoration: none;
   color: #374151;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   position: relative;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  min-width: fit-content;
 }
 
 .nav-link:hover {
   color: #667eea;
   background: rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
 }
 
 .nav-link::after {
@@ -75,23 +84,41 @@
   width: 20px;
 }
 
+.nav-link.join-button {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  font-weight: 600;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.nav-link.join-button:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  flex-wrap: nowrap;
 }
 
 .phone-number {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #374151;
+  color: white;
   font-weight: 500;
   background: #667eea;
-  color: white;
-  padding: 0.75rem 1.25rem;
-  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: fit-content;
+  font-size: 0.9rem;
 }
 
 .phone-number:hover {
@@ -111,6 +138,22 @@
   font-size: 1.5rem;
   color: #374151;
   cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.6rem;
+  }
+  
+  .phone-number {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -145,5 +188,11 @@
 
   .logo h2 {
     font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    white-space: normal;
+    text-align: center;
+    padding: 0.75rem 1rem;
   }
 }
