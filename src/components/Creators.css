@@ -1,0 +1,111 @@
+.creators {
+  background: #f8fafc;
+}
+
+.creators-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.creators-text .section-title {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.creators-description {
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.benefits-list {
+  margin: 2rem 0;
+}
+
+.benefit-item {
+  margin-bottom: 2rem;
+}
+
+.benefit-item h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.creators-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.visual-stats {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-item {
+  margin-bottom: 2rem;
+}
+
+.stat-item:last-child {
+  margin-bottom: 0;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+@media (max-width: 968px) {
+  .creators-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .creators-text .section-title {
+    text-align: center;
+  }
+  
+  .visual-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    margin-bottom: 0;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .visual-stats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .stat-item {
+    margin-bottom: 0;
+  }
+}
